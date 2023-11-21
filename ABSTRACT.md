@@ -3,7 +3,7 @@ The authors of *India Driving Dataset (IDD): A Dataset for Exploring Problems of
 There are 2 different versions available at DatasetNinja:
 
 * IDD: Segmentation (current)
-* IDD: Object Detection
+* IDD: [Object Detection](https://datasetninja.com/idd-detection)
 
 IDD diverges from popular benchmarks like Cityscapes, introducing an expanded label set to accommodate new classes and reflecting label distributions that deviate significantly from existing datasets. The dataset captures the complexity of unstructured road scenes, featuring classes with greater within-class diversity. Additionally, IDD identifies new classes such as drivable areas beyond the road. The authors propose a four-level label hierarchy (***level1id***, ***level2id***, ***level3id***,  ***level4id***) to allow varying levels of complexity, opening avenues for new training methods. <i>Please note, that some labels were not specified by their ***category***</i>
 
