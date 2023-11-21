@@ -13,8 +13,8 @@ from dataset_tools.templates import (
 ##################################
 # * Before uploading to instance #
 ##################################
-PROJECT_NAME: str = "IDD Segmentation"
-PROJECT_NAME_FULL: str = "IDD: India Driving Dataset (Segmentation) 20k"
+PROJECT_NAME: str = "IDD: Segmentation"
+PROJECT_NAME_FULL: str = "India Driving Dataset (IDD): A Dataset for Exploring Problems of Autonomous Navigation in Unconstrained Environments (Segmentation 20k)"
 HIDE_DATASET = True  # set False when 100% sure about repo quality
 
 ##################################
@@ -24,7 +24,11 @@ LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
 CATEGORY: Category = Category.SelfDriving()
 
-CV_TASKS: List[CVTask] = [CVTask.InstanceSegmentation(), CVTask.SemanticSegmentation(), CVTask.ObjectDetection()]
+CV_TASKS: List[CVTask] = [
+    CVTask.InstanceSegmentation(),
+    CVTask.SemanticSegmentation(),
+    CVTask.ObjectDetection(),
+]
 ANNOTATION_TYPES: List[AnnotationType] = [AnnotationType.InstanceSegmentation()]
 
 RELEASE_DATE: Optional[str] = None  # e.g. "YYYY-MM-DD"
@@ -51,18 +55,38 @@ CLASS2COLOR: Optional[Dict[str, List[str]]] = None
 
 # If you have more than the one paper, put the most relatable link as the first element of the list
 # Use dict key to specify name for a button
-PAPER: Optional[Union[str, List[str], Dict[str, str]]] = "http://idd.insaan.iiit.ac.in/media/publications/idd-650.pdf"
+PAPER: Optional[
+    Union[str, List[str], Dict[str, str]]
+] = "http://idd.insaan.iiit.ac.in/media/publications/idd-650.pdf"
 BLOGPOST: Optional[Union[str, List[str], Dict[str, str]]] = None
-REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {"GitHub":"https://github.com/AutoNUE/public-code"}
+REPOSITORY: Optional[Union[str, List[str], Dict[str, str]]] = {
+    "GitHub": "https://github.com/AutoNUE/public-code"
+}
 
 CITATION_URL: Optional[str] = None
-AUTHORS: Optional[List[str]] = ["Girish Varma", "Anbumani Subramanian", "Anoop Namboodiri", "Manmohan Chandraker", "C V Jawahar"]
+AUTHORS: Optional[List[str]] = [
+    "Girish Varma",
+    "Anbumani Subramanian",
+    "Anoop Namboodiri",
+    "Manmohan Chandraker",
+    "C. V. Jawahar",
+]
 
-ORGANIZATION_NAME: Optional[Union[str, List[str]]] = ["IIIT Hyderabad, India", "Intel Bangalore","University of California, San Diego"]
-ORGANIZATION_URL: Optional[Union[str, List[str]]] = ["https://www.iiit.ac.in/", "https://www.exploreintel.com/meet/bangalore", "https://ucsd.edu/"]
+ORGANIZATION_NAME: Optional[Union[str, List[str]]] = [
+    "IIIT Hyderabad, India",
+    "Intel Bangalore",
+    "University of California, San Diego",
+]
+ORGANIZATION_URL: Optional[Union[str, List[str]]] = [
+    "https://www.iiit.ac.in/",
+    "https://www.exploreintel.com/meet/bangalore",
+    "https://ucsd.edu/",
+]
 
 # Set '__PRETEXT__' or '__POSTTEXT__' as a key with string value to add custom text. e.g. SLYTAGSPLIT = {'__POSTTEXT__':'some text}
-SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = ["Additionally, every image has information about its ***sequence***, while every object has its ***supercategory*** "]
+SLYTAGSPLIT: Optional[Dict[str, Union[List[str], str]]] = {
+    "__PRETEXT__": "Additionally, every image has information about its ***sequence***, while every object instance has its ***category*** and 4-level label hierarchy: ***level1id***, ***level2id***, ***level3id***,  ***level4id***"
+}
 TAGS: Optional[List[str]] = None
 
 

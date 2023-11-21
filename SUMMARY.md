@@ -1,0 +1,9 @@
+**India Driving Dataset (IDD): A Dataset for Exploring Problems of Autonomous Navigation in Unconstrained Environments (Segmentation 20k)** is a dataset for instance segmentation, semantic segmentation, and object detection tasks. It is used in the automotive industry. 
+
+The dataset consists of 20101 images with 1519090 labeled objects belonging to 41 different classes including *obs-str-bar-fallback*, *sky*, *vegetation*, and other: *pole*, *road*, *drivable fallback*, *building*, *motorcycle*, *car*, *rider*, *billboard*, *person*, *wall*, *vehicle fallback*, *non-drivable fallback*, *autorickshaw*, *curb*, *truck*, *traffic sign*, *bus*, *sidewalk*, *fence*, *fallback background*, *guard rail*, *bridge*, *polegroup*, *bicycle*, *animal*, *traffic light*, *out of roi*, *caravan*, *parking*, *tunnel*, *rail track*, *trailer*, *rectification border*, *train*, *ego vehicle*, *license plate*, *ground*, and *unlabeled*.
+
+Images in the IDD: Segmentation dataset have pixel-level instance segmentation annotations. Due to the nature of the instance segmentation task, it can be automatically transformed into a semantic segmentation (only one mask for every class) or object detection (bounding boxes for every object) tasks. There are 4050 (20% of the total) unlabeled images (i.e. without annotations). There are 3 splits in the dataset: *train* (14027 images), *test* (4038 images), and *val* (2036 images). Additionally, every image has information about its ***sequence***, while every object instance has its ***category*** and 4-level label hierarchy: ***level1id***, ***level2id***, ***level3id***,  ***level4id***. The dataset was released in 2018 by the IIIT Hyderabad, India, Intel Bangalore, and University of California, San Diego.
+
+Here is a visualized example for randomly selected sample classes:
+
+[Dataset classes](https://github.com/dataset-ninja/idd-segmentation/raw/main/visualizations/classes_preview.webm)
