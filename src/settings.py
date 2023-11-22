@@ -22,7 +22,7 @@ HIDE_DATASET = False  # set False when 100% sure about repo quality
 ##################################
 LICENSE: License = License.Unknown()
 APPLICATIONS: List[Union[Industry, Domain, Research]] = [Industry.Automotive()]
-CATEGORY: Category = Category.SelfDriving()
+CATEGORY: Category = Category.SelfDriving(benchmark=True)
 
 CV_TASKS: List[CVTask] = [
     CVTask.InstanceSegmentation(),
